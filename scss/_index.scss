@@ -1,0 +1,223 @@
+.content {
+    .content-title {
+        text-align: center;
+        width: 200px;
+        margin: 0 auto 30px;
+        h3 {
+            font-size: $font-size * 1.25;
+            color: $font-Color;
+            line-height: 32px;
+            font-weight: 600;
+            position: relative;
+            &:before {
+                content: '';
+                display: block;
+                width: 110px;
+                height: 1px;
+                background-color: #979797;
+                position: absolute;
+                top: 50%;
+                left: -60%;
+            }
+            &:after {
+                content: '';
+                display: block;
+                width: 110px;
+                height: 1px;
+                background-color: #979797;
+                position: absolute;
+                top: 50%;
+                right: -60%;
+            }
+            @include iphone(){
+               &:before,&:after{
+                display:none;
+               } 
+            };
+        }
+    }
+}
+
+.secret-main {
+    li {
+        width: calc(100% / 3 - 60px);
+        margin: 0px 30px 50px;
+        text-align: center;
+        float: left; 
+        @include iphone(){
+            width:calc(100% - 60px);
+        };     
+    }
+    img {
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+    h4 {
+        margin-bottom: 10px;
+        font-size: $font-size * 1.125;
+        color: $font-Color;
+    }
+    p {
+        line-height: 1.4;
+        color: $font-Color;
+        text-align: left;
+    }
+}
+
+.today-chef {
+    padding: 0 42px;
+    background-color: $font-Color;
+    line-height: 1.6;
+    @include iphone(){
+        padding:0 30px;
+    };
+    .chef-img{
+        float: left;
+        margin-right: 20px; 
+        max-width:calc(48% - 20px );
+        overflow: hidden;
+         @include iphone(){
+           max-width: 100%;
+           float:none;
+           margin-right: 0px; 
+        };
+    }
+    img {
+        height: 386px;
+        max-width: 470px;
+        @include pad(){
+            position:relative;
+            left:-95px;
+        };
+        @include iphone(){
+            // left:0;
+            height: auto;
+        };
+    }
+    .chef {
+        margin-left: 495px;
+        padding-top: 80px;
+        color: $bd-background;
+        @include pad(){
+            margin-left:0;
+            padding:15px 0;
+        };
+    }
+
+    h4 {
+        line-height: 1.4;
+        font-size: $font-size * 1.25;
+        +p {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.feeling {
+    color: $font-Color;
+    padding: 50px 0;
+    h3 {
+        font-size: $font-size * 1.5;
+        text-align: center;
+        padding-bottom: 30px;
+        font-weight: 500;
+    }
+    ul {
+        padding: 0 42px;
+        li {
+            width: 31.333333%;
+            margin-right: 2%;
+            float: left;
+            .person {
+                width: calc(100% - 80px);
+                float: left;
+                @include iphone(){
+                    margin-bottom:15px;
+                };
+            }
+            @include iphone(){
+                width: 100%;
+                float:none;
+            };
+        }
+        img {
+            border-radius: 50%;
+            float: left;
+            width: 67px;
+            height: 67px;
+            margin-right: 13px;
+        }
+        h4 {
+            font-size: $font-size * 1.125;
+            padding: 25px 0;
+        }
+        p {
+            line-height: 24px;
+            padding-bottom: 16px;
+        }
+        span {
+            float: right;
+        }
+    }
+}
+
+label {
+    padding-bottom: 6px;
+}
+input {
+    font-size: 16px;
+    margin-bottom: 12px !important;
+}
+
+.place {
+    padding: 50px 42px;
+    color: $font-Color;
+    background-color: #FAFAFA;
+    @include iphone(){
+        padding:50px 10px;
+    };
+    h3 {
+        padding-bottom: 38px;
+        text-align: center;
+        line-height: 1.4;
+        font-size: $font-size * 1.5;
+        font-weight: 400;
+    }
+    .connetion-img{
+        float: left;
+        margin-right: 20px; 
+        max-width:calc(48% - 20px );
+        overflow: hidden;
+        @include iphone{
+            float:none;
+            margin-right:0;
+            max-width: 100%;
+            margin-bottom:30px;
+        };
+    }
+    img {
+        height: 386px;
+        max-width: 470px;
+    }
+    .contact-us {
+        margin-left: 48%;
+         @include desktop-below (){
+            margin-left:50%;
+         }
+         @include iphone(){
+            margin-left:0;
+         };
+
+    }
+
+    
+    label.inline {
+        display: inline;
+    }
+    form {
+        margin-bottom: 20px;
+    }
+    .contact-us-btn {
+        float: right;
+    }
+}

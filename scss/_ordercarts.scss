@@ -1,0 +1,221 @@
+.content-order{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.aside-list{
+	width: 23.5%;
+	color:$font-Color;
+	float:left;
+	@include desktop-below(){
+		width:25%;
+	}
+	@include iphone(){
+		width: 100%;
+		margin-bottom:5px;
+	};
+	h3{
+		font-size: $font-size * 1.25;
+		margin-bottom: 16px;
+	}
+	i.fa{
+		font-size:26px;
+	}
+	li{
+		line-height: 32px;
+		border-bottom:1px solid $font-Color;
+		padding-top:1px;
+		padding-left: 8px;
+
+		a{
+			display:block;
+		}
+		span{
+			display: inline-block;
+			padding-left: 2px;
+			width: 22px;
+		   	height: 22px;
+		    vertical-align: text-bottom;
+		    line-height: 21px;
+		    border-radius: 50%;
+		    background-color: #3D1101;
+		    color: #fff;
+		    text-align: center;
+		    font-size: 13px;
+		}
+	}
+	li.active,
+	li:hover,
+	li:focus{
+		background-color: $font-Color;
+		color:#fff;
+		span{
+			background-color:#fff;
+			color:$font-Color;
+		}
+	}
+}
+
+.list-menu{
+	// margin-left:240px;
+	width: 75%;
+    float: left;
+	padding-left:20px;
+	@include iphone(){
+		width: 100%;
+		gloat:none;
+		padding-left:0px;
+	};	
+
+
+	.search-line{
+		margin-bottom:26px;
+		height: 35px;
+		.pure-form {
+			width: 65%;
+			float:left;
+			@include iphone(){
+				width: 100%;
+				float:none;
+			};
+		}
+	}
+	input.input-search{
+		width:calc(100% - 40px);
+		border:2px solid $font-Color;
+		border-radius:0;
+		transition:border .5s;
+		@include iphone(){
+			float: left;
+    		margin-top: 0.7em;
+		};	
+		&:focus,&:active{
+			border-color: $bg-1-color;
+				& ~ button.btn-search{
+					background-color:$bg-1-color;
+			}
+		}
+	}
+	.btn-search{
+		padding: 8px 12px 9px;
+    	margin-left: -8px;
+    	transition: background-color .5s;
+    	margin-bottom: 12px;
+	}
+}
+
+.pay-block{
+	float:right;
+	color:$font-Color ;
+	position:relative;
+	margin-right:63px;
+	@include iphone(){
+		margin-right: 9px;
+    	margin-bottom: 10px;
+	};
+	a{
+		display: inline-block;
+    	padding-right: 13px;
+    	margin-right: 7px;
+    	border-right: 1px solid;
+    	font-weight:600;
+    	vertical-align: text-top;
+	}
+	i.fa-shopping-cart{
+		font-size:32px;
+	}
+
+
+}
+span.pay-mes{
+	position: absolute;
+    top: -2px;
+    right: -8px;
+    width: 15px;
+    height: 15px;
+    line-height: 14px;
+    color: #fff;
+    background-color: $bg-1-color;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 13px;
+
+
+}
+
+.list-menu-order{
+	text-align:center;
+	color:$font-Color;
+    li{
+    	float: left;
+		width: calc(33.33333% - 20px);
+    	box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+    	margin-right: 20px;
+    	margin-bottom: 26px;
+    	&:nth-child(1) .food-img{
+			background-image:url(../img/product_1.png);
+		}
+		&:nth-child(2) .food-img{
+			background-image:url(../img/product_2.png);
+		}
+		&:nth-child(3) .food-img{
+			background-image:url(../img/product_3.png);
+		}
+		&:nth-child(4) .food-img{
+			background-image:url(../img/product_4.png);
+		}
+    	img{
+    		padding-bottom:11px;
+    	}
+    	@include desktop-below(){
+    		width:calc(48% - 20px);
+    	};
+    	@include iphone(){
+    		width:100%;
+    		// float:none;
+    	}
+    }
+}
+
+.pay-menu-list{
+	padding-bottom:10px;
+	.food-img{
+		
+		height: 120px;
+		background-position:top center;
+		background-repeat:no-repeat;
+		margin-bottom:10px;
+	}
+	.pay-info-group{
+		padding-left: 10px;
+		padding-right:10px;
+	}
+	h3{
+    	font-size:20px;
+    	font-weight: 400;
+    	+span{
+			font-size: 12px;
+			padding-bottom:8px;
+    	}
+    	+Span ~ span{
+    		display:block;
+			font-size: 20px;
+			padding-bottom:13px;
+			font-family: Roboto-Light;
+			font-weight:600;
+			font-style: italic;
+    	}
+    }
+    hr{
+    	width: 91px;
+    	height: 3px;
+    	margin-bottom: 20px;
+    	border: 0;
+   		height: 1px;
+    	background: $font-Color;
+    }
+    a{
+    	display:block;
+    	padding-top: 0.2em;
+    	padding-bottom:0.2em;
+    }
+}

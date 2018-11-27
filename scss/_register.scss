@@ -1,0 +1,88 @@
+.register-group{
+	max-width: 620px;
+	margin: auto;
+	color:$font-Color;
+	@include iphone(){
+		padding: 10px;
+		margin-bottom: 10px;
+	};
+
+	img{
+		display:block;
+		margin:auto;
+		padding-bottom:3px;
+	}
+	h3{	
+		line-height: 1.5;
+		padding-bottom:35px;
+		text-align: center;
+		font-size: 20px;
+		font-weight:bold;
+
+	}
+	.register-btn{
+    	text-align: right;
+    	.btn{
+    		padding:.3em;
+    	}
+    	button{
+    		width: 50%;
+    	}
+	}
+}
+
+
+.register{
+	max-width: 620px;
+	min-height: 316px;
+	margin-left:auto;
+	margin-right:auto;
+	background: $bd-background;
+	box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+	border-top:3px solid $font-2-Color;
+	border-left: 1px solid #e3e3e3;
+	padding:15px;
+
+	label{
+		font-weight:600;
+	}
+	
+	h4{
+		text-align:center;
+		font-weight:bold;
+		padding-bottom:16px;
+	}
+	.forget-pass{
+		display:inline-block;
+		font-size: 14px;
+		color: $font-2-Color;
+		padding-bottom:30px;
+	}
+	.terms{
+		float:left;
+		width: 47%;
+		@include iphone(){
+			float:none;
+			width: 100%;
+			padding-bottom: 15px;
+		};
+		> h4{
+			font-size: 16px;
+			text-align:left;
+			padding-top:5px;
+		}
+		p{
+			line-height:1.3;
+		}
+	}
+	form{
+		width: calc(53% - 40px);
+		margin-left:20px;
+		float:left;
+		@include iphone(){
+			width: 100%;
+			margin-left:0;
+			float:none;
+		};
+	}
+}
